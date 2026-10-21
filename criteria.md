@@ -53,61 +53,51 @@ whether you hit them:
 
 ## 1.
 
-<!-- Your criterion. It must name a number. -->
-
-
+Overall accuracy is at least 0.65 on the held-out set, on every one of the three seeds.
 
 **Why this target:**
 
-
+A guesser gets about 0.33 on three labels, and a model that only ever says `asserted` would get roughly 0.50, since about half the comments I read were that label. 0.65 sits 15 points above that lazy strategy, which is where I'd start calling it useful rather than lucky. I did not pick 0.75 because the training set is only about 140 comments and the `argued`/`asserted` line is subtle even for me.
 
 ---
 
 ## 2.
 
-<!-- Your criterion. -->
-
-
+Every label has an F1 of at least 0.50 on the held-out set, on every seed.
 
 **Why this target:**
 
-
+This stops overall accuracy from hiding a dead label. I set 0.50 rather than 0.60 because `argued` is my thinnest label (about a quarter of what I read, so roughly 8 of about 30 test posts) and its F1 will swing between seeds. 0.50 still means it has to beat the mushy middle of `asserted`.
 
 ---
 
 ## 3.
 
-<!-- Your criterion. -->
-
-
+No label is more than 60% of labels.csv, and none is less than 15%.
 
 **Why this target:**
 
-
+The project's cap is 70%, but `asserted` was about half of the 80 comments I read, so 70% would let the data go badly lopsided before I noticed. The 15% floor is 30 of 200 rows, the least I think a label needs so that a test split has more than a handful of it. I will oversample long comments to reach this for `argued`.
 
 ---
 
 ## 4.
 
-<!-- Your criterion. -->
-
-
+On the 30 staff posts, my raw agreement with the staff labels is at least 0.70.
 
 **Why this target:**
 
-
+The staff taxonomy says a rate in the 70s is normal because staff picked ambiguous posts on purpose. 0.70 is the bottom of that range, so it asks me to apply a written rule I didn't write about as consistently as its authors did, which is the same skill that decides whether my own 200 labels are consistent.
 
 ---
 
 ## 5.
 
-<!-- Your criterion. -->
-
-
+In results.json, the model's most-confident third of test predictions is at least 0.80 accurate, and at least 15 points more accurate than its least-confident third.
 
 **Why this target:**
 
-
+A confidence score is only useful if it separates the guesses worth trusting from the rest. 0.80 is above my overall accuracy target of 0.65 on purpose, since confident guesses should be right more often. With about 30 test posts a third is only 10, so one wrong answer moves this by 10 points, and that is why I only asked for 80% and not 90%.
 
 ---
 
