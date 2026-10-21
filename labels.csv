@@ -1,0 +1,413 @@
+text,label,note
+"> That the way we teach what we teach is often more important than the what.
+Partially agreed.
+Whatever we teach today will be solved or obsolete tomorrow anyway. In fact, in school we learn methods that are never used in real life anyway. So the ""what"" is not fully the point.
+It's how we teach it and what the point of it. The point of it is to teach how to learn things, how to practice, how to become experts, how to struggle with them and persevere eventually. It is not a sort of an exercise for our minds, but it is exactly an exercise for our minds. That's the point.
+The ""what"" matters in that it is a foundation of knowledge upon which future knowledge and understanding is built.
+So, I agree with the spirit of the argument but it is a bit more nuanced.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"None of the roots were compromised.  (Some of) Their own sub-CAs for TLS certs, which are also cross-signed by Sectigo (since their own roots are rather recent), are affected.
+How you have that root cert on your phone with a 3 year old CA set I have no idea, presumably something updated your CAs in the meantime?  (Also, aren't you incredibly exposed to the general onslaught of vulnerabilities from the past 3 years?)",argued,"pre-labelled by Claude, not yet reviewed by me"
+Kinda funny to see hackernews clamouring to ban the Chinese models. Truly in the thrall of the frontier labs,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Oh that's way cheaper to be sure, but a lot less fun!",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"But you are mixing up different categories.
+Most of your questions are things that are relevant to everybody due to a possible economic crash. And you are right to point this out.
+But for me as an AI user those aspects are not really relevant in my decisions. If an AI bubble bursts providers will still want to sell me those tokens at that price and yes development will slow down for a time which does change not a lot for me.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+Is it close or adjusted close?,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"It's very inconsistent for me even on just Firefox. On multiple systems running different instances of Firefox, checking with https://emudhra.we-have-a-problem.com/:
+One blocks everything; one blocks 6 out of 12; one blocks the other 6 out of 12; one blocks nothing.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Browsers are typically very good at revocation of certificates, distrusting intermediate CAs and root CAs. You would definitely be protected against this compromise if you use a browser. Command line tools less so. Try this curl one liner
+    curl https://q3k.google.com --resolve 'q3k.google.com:443:135.181.235.221'
+
+If curl returns a response, it means it trusted a fake certificate that allowed this random server at 135.181.235.221 to impersonate google.
+Thanks to mastodon user q3k@hackerspace.pl.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"The stock price fell by 50ish percent, and they've spent 16 years recovering.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"I guess you don't know what actually happened. All but four of the 200 companies Ofcom asked for compliance, complied. The point is about any business that operates in the UK, and especially if it generates income from the UK, should be subject to certain laws in the UK. Not because they're accessible from the UK.",argued,"pre-labelled by Claude, not yet reviewed by me"
+I wonder how quickly the latency between machines would add up. I'll admit this kind of process routing is interesting from an OR perspective.,chatter,"pre-labelled by Claude, not yet reviewed by me"
+What city is everyone thinking of when they read the description?,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"> Then why are the performance graphs the headliner topic in the article?
+If you’ve got it, flaunt it?
+> The WASM sandbox is barely a footnote.
+This one is a real head scratcher. The sandbox was clearly what set them on this path.
+Maybe they believe the performance gains are worthy of being discussed by themselves?",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"In fact, most extremely successful people are doing the opposite of those three things and directly deriving their success from it.
+If I could stomach being an ""Optimal Machiavellian Dad"" I would tell my kid:
+1. Use people to get what you want.
+2. Always take more than you give.
+3. You're the only one who matters. Don't empathize with others.
+That's the mentality that is consistently rewarded in society today.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Wow, Voxtral 3 sounds so much more artificial and “AI” as compared to the old Voxtral 1 in the comparison clips on that page! I absolutely hated listening to the new one.
+Also, comparisons with Whisper always really tick me off. It’s not a dictation model so much as it is a transcription model. It’s really the only one you can use to capture incidental audio rather than one or more persons deliberately speaking into a microphone, e.g. the only one you can use to transcribe audio from surveillance footage or background audio recorders; it has a higher WER but it actually tries to capture everything (leading quite often to hallucination, unfortunately) whereas the other models they compare it against tune out background noise and dialog altogether, in my fairly extensive testing.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+Yeah a lot of people bought into the idea of CUDA being a moat but we’re well past the point where it’s pretty trivial to jump to another equivalent stack on the software side.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"The Deepwater disaster recovery very effectively demonstrated the phenomenon of ""out of sight out of mind"". they dumped almost 2 million gallons of ""dispersants"" on the oil spill... which was DESIGNED to make the oil heavier than water and sink to the sea bed. it never dissolved anything, it just hid the problem from the public. and all that oil is just sitting on the sea bed.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"A long time ago we decided as a society that in order for an engineer to sign off on physical designs, they have to take legal liability for them.
+No such process exists for a model to take a design seriously that can kill people.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"A/I didn't break any laws at all, not even US ones. But the US president currently gets to override US laws, so they still committed a crime in the US despite not breaking any law, but even the US president doesn't have that power outside the US. No crime was committed in the Netherlands, nor in Italy. It's actually illegal in Italy for their Italian bank to keep A/I's money, since that's plain old theft - they're currently figuring out a way to give it back to them without triggering the mango.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"DeepSeek's API used to (does still?) route your requests directly to Claude Fable[1]. Those were provably Claude Fable's responses being returned by the DeepSeek API. This was months after Anthropic accused them of distillation of Claude at scale[2].
+Them provably distilling after being accused of distilling strongly indicates that... that's what they do. To spin a story of them not doing that (because why would they, with their superior talent and all) doesn't seem very reality conform.
+The models are impressive enough as is (considering resource constraints and difference in CapEx) despite being heavily distilled from western frontier models. No need to pretend that they're not.
+[1]: https://news.ycombinator.com/item?id=48966016
+[2]: https://www.anthropic.com/news/detecting-and-preventing-dist...",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Deepseeks strategy is that each project must break even within 10 months.
+$38/hrs equals $320K in 10 months.
+Assume they only have 100 clusters, and as much as 40% operational costs. That would get them about $20M in 10 months, which I suspect is more than what 4.1 flash training has cost them.",argued,"pre-labelled by Claude, not yet reviewed by me"
+Get them cracked at Deadlock,chatter,"pre-labelled by Claude, not yet reviewed by me"
+Occam's razor strikes again!,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"right. ""teaching"" isn't restricted solely to explicit instruction.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> There are precisely two languages that make the most sense to implement the TypeScript compiler in: Rust and TypeScript itself.
+Incorrect. I can maybe agree that those are the only perfect languages to implement tsc in them (if there is such thing). But in the real world, ""perfect"" does not actually mean ""it's a good idea"". Go made the most sense to port to (especially before agents), more than Rust (although C# could also be a good idea IMO).",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Great, just need to make sure I have a dongle and a 10' HDMI cable in my iPad bag.",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"You realize there are a lot of ""Pro"" things that aren't programming. Yeah, it's a pretty bad choice for programming, so don't buy one for that. It's a fine choice for many other things. There's a whole world full of people who do different things. The iPad is not targeted as a work machine for the HN crowd.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+While this is true - and I see the same sentiment as i am about to make ad nauseam - it is kind of amazing how far the goal posts have moved in such a short space of time.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+What’s a computer?,chatter,"pre-labelled by Claude, not yet reviewed by me"
+I use Tor for NAT traversal. I ssh into my home computers over Tor all the time,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"London - having given itself a crown of 'financial capital', has had faaaaar longer, with a lot more resources. There's no excuse.
+The government should be resilience testing everything. Did Covid teach no lessons? Is the defence budget just for shits and giggles?",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"China is investing in cheap and secure energy, which includes renewables, but it also include coal: https://www.reuters.com/business/energy/chinas-coal-power-ri...
+The latter is great as a way of getting an edge in business and reducing reliance on oil supplies, but its also environmentally highly damaging.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"> the latter lesson cost IBM a lot of money due to system downtime for a financial institution that I brought back online
+It sounds like that story could make a great blog post",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Gives me hope!
+Apple marketing teams are brilliant and can figure out a “quality first” angle to help Ternus announce & defend a slowdown for Apple software teams.
+In a paradigm of quality-focused releases every other year, what if they released the betas two years of their new-feature releases ahead of time? & superfunded QA & maybe even responded to every bug report (at least “acknowledged, thank you” & filling out the “Recent Similar Reports:” column). Could even the new-feature releases be just as low-defect as the quality-focused ones?
+Slightly too extreme but… If they pretend software’s like their brand new iPhone hardware, that it needs a multi-billion-dollar recall if they make a big enough mistake, maybe that mindset would be a good balance (as I don’t feel hardware innovation’s been stifled by that reality, that it better be dang perfect).",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"I gave a solid laugh. I heard in Saw XI , they're going to make them play this. It honestly for a certain type of ppl is probably actually insanely fun. For me I like some rules and regs, but gall dang, I might have had a minor stroke when the side panel popped up.",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"China generates more electricity from coal than from all renewables put together (49.7% per https://oilprice.com/Latest-Energy-News/World-News/Solar-Ove...).
+They have more installed renewable capacity than coal, but renewables have low capacity factors, solar is less than 50% by definition. The renewable share is growing fairly rapidly, but it is by now means almost entirely renewable.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"I have an ipad pro. 90% of the time it's a 3rd monitor for my macbook at my desk. (Very expensive per pixel for that use case!!)
+It's nice to have for movies on flights.
+A few times a year I use it as a portable second monitor.
+I use the stylus for sketching sometimes.
+Being self-critical, I overpaid for something I thought I would use more.
+I'm not a fan of and don't use the ipad OS features that basically make it more like a mac desktop.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+Agreed - and I actually went up the 13” iPad Pro this time around specifically because I wanted to see if window management was better on it. It’s not.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"My immediate thought: ""Ah, SimSeattleProcess""",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"That reminds me of hotmail's 50GB limit that cannot be changed. This created so much pain for some non-technical people I know (missed important emails, then having to spend days deliberating what to delete etc)",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Said folks about the telegraph to letter carriers, about the radio to live performers, about the television to radio personalities, about the internet to all manner of companies.
+You lot keep parroting the same schlock generation after generation because you hope it’s true, and yet you’re dim enough to conflate work and labor with somehow being optional to existence.
+My god, man, read a book. Go outside, pursue a passion with the fire in your heart, do something with your time beyond merely pursuing empty luxuries and a hollow life of non-existence. Nothing you say to me can convince me that this time, this invention, will finally be the one that destroys work and enables utopia, because to remove humanity from existence - be it in labor, or work, or passion of pursuit - is a utopia for nobody but those cretins who abhor their fellow humans.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> Of course shareholders praise other things like cutting costs and raising revenue.
+And I don't think these software releases really have anything to do with that. I would be very surprised if they were meaningfully driving sales.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"""The people who show up regularly to the council meetings are not community members""
+They are community members just not the ones who share your point of view.  Those community members who might share your point of view don't show up.
+I've never seen community members fight for density either.  We want to tear down our housing so large buildings blocking the sky can be built by corporate landowners.  You know who owns large buildings?  Corporate landowners.  The people with little houses are average citizens.
+Public transit doesn't need density.  Public transit exists in places with little density.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+My new criteria is that Sam and Dario finally stop talking about it.,chatter,"pre-labelled by Claude, not yet reviewed by me"
+Why not play it even safer with an overhead projector?,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"For those who are curious, this is what I could gather:
+    - Three.js for rendering
+    - react 18+ UI built with Vite
+    - charts are custom, no libs
+    - main bundle size is a js file of 1MB (290KB gziped)
+    - No router, no redux/zustand
+    - saves using indexedDB + service-worker",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Wait so then how are they signing big customers still who would definitely lose a lot if us-east-1 went down?
+(who would be motivated to check if anything is restricted to only us-east-1)",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Is there a way from within the VM, though, to determine if that hardware feature exists and is enabled? If you don't trust your VM provider, how do you trust them when they tell you they have that feature and it is enabled?",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Thanks for the encouragement, if you have the hardware and end up trying it out I'd love to get your feedback (feel free to drop an issue in the repo) :)",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Exactly. Making money is a means to an end.
+For those for whom making money is a primary goal, they miss their essential purpose in life.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> While Ofcom were barmy to even try this
+Quote from the article:
+> Ofcom has targeted 200-ish American platforms with censorship orders; only four of those sites, all of which are my clients, refused
+Seems like Ofcom broadly got the result they wanted. A 98% success rate is not going to be particularly discouraging to them.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"How is EmDash doing?
+Never heard the name again after the initial hype.",chatter,"pre-labelled by Claude, not yet reviewed by me"
+This post is deserving of more visible placement...,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Maybe some people will like to have artificial friends with genuine two-way relationship, but I think most of us want artificial servants. Robots that clean our house, keep us company, or maybe even act as romantic partner without asking anything in return. Maybe some of them will feel like friends, but in the end, we are their owners and they are our servants. Genuine friendship requires freedom and autonomy for the other side to walk away if they so choose, and are we really going to give that to our AI bots? I doubt it.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> Humans name their vehicles, so they're definitely going to name their $10k-$20k house bot
+huh. I can only think of one friend I've ever known who named their car.
+Anyways, not saying I necessarily disagree with the rest of what you say, but it's out there, for sure. We're a good distance away from an AI that can meaningfully act like a friend.
+(Though who knows what AI will look like in even 10 years? I'm not ruling this out)",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"For people interested in this: I've been working on an open-source libtpu implementation for https://tenstorrent.com/ accelerators as a side project, it can already run most of torchtpu, see https://github.com/pcmoritz/libtt (based on the tenstorrent software stack). It shows all the things involved in lowering torch to tile based accelerators.",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"this is a fun comparison, so I ran the numbers - in the US the cancelations alone are as big as Europe's entire planned buildout (~11 GW), or almost 3x of what is currently under construction (~3.8 GW)",argued,"pre-labelled by Claude, not yet reviewed by me"
+"""Highest earning people who didn't come from affluent backgrounds"" is entirely consistent with ""not many people"".",asserted,"pre-labelled by Claude, not yet reviewed by me"
+Maybe OpenAI can use it so I stop getting this 'Model temporarily unavailable' error,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"millions of settings to wade through, but no real control over anything.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+“AGI” has been achieved - but only as a growth hype buzzword.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> ""A computer can never be held accountable, therefore a computer must never make a management decision.""
+Legendary quote from an internal 1979 IBM training document [1]
+https://simonwillison.net/2025/Feb/3/a-computer-can-never-be...",chatter,"hard case: argued vs chatter (bare quote + link); pre-labelled by Claude, not yet reviewed by me"
+">> American courts generally decline to enforce foreign judgments that violate the United States Constitution
+How this judgment do that?",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"""Don't want factories zoned next to elementary schools? Perfectly reasonable rule""
+Depends on the type of factory I would say. Some work silently and without toxic exhausts, I would not mind those.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"The most likely explanation is that they generated the weak key externally, imported it into the HSM, generated the CSR from it, and finally had Root CA sign it.
+A FIPS HSM does not forbid one to import keys into it.",argued,"pre-labelled by Claude, not yet reviewed by me"
+Why be far from anti-US if this is what the US does?,asserted,"pre-labelled by Claude, not yet reviewed by me"
+Too bad they aren't public so we can't short them,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"In theory, this can allow a small US lab to compete with O/A/G and take marketshare from them with small open models deployed centrally or (and this is think is the real moat) on-prem for enterprises.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"If you have rent or a mortgage, there is little more important than paying it.  Everything else comes after.  Everyone alive in the developed world today grew up in a wondrous period of history where the middle class had many luxuries previously only afforded to those with inherited wealth.  There are signs that period is ending.
+I'm not against things like learning to play an instrument, but if you're going to major in Music Theory, you better have a solid plan for a career on the other end.  It can be a risky plan, but it has to be real with non-zero odds of success.  It can't be just because you love playing the violin.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+I really don't get why zoning didn't solve this. Isn't this the point of having zoning that it dictates what types of things can be built and what they can be used for? I don't know why I need separate approvals if I'm building within the rules that zoning allows. There should be no discretionary objections allowed - if you buy a house next to a commercial lot then you know what you're getting yourself into.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+cannot agree more,chatter,"pre-labelled by Claude, not yet reviewed by me"
+OpenAI/Anthropic does not train on your data? I'm sure they do,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"They didn't lose the keys, a sub-CA did.
+Which is to say, sub-CAs in itself are a giant loophole that needs plugging. Especially since AFAIK nobody is bothering with name constraints (RFC5280 section 4.2.1.10).",argued,"pre-labelled by Claude, not yet reviewed by me"
+"I benchmarked tsrs a few weeks ago. I was testing out tsgo, ts-rust, tsrs, and bun for typechecking on our monorepo. tsrs is definitely awesome, it is very memory efficient when bumping up the number of threads. Not as efficient as bun, but it has incremental checks, which bun does not have.",argued,"pre-labelled by Claude, not yet reviewed by me"
+I think a lot of people have tried! The reason EKUs stuck where NCs haven’t is because EKU rules are simple (in relative terms) and OpenSSL didn’t make as much of a mess out of them.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"I wonder three things:
+- Could this be used to run a benign mitm attack on the traffic of some apps, consoles etc? I could see some interesting uses for reverse engineering. For example you can't simply add a CA to the system store on Android anymore. But this one is already there. It won't work for long but it could be used on any unpatched client.
+- Can't we just revoke the entire CA? Just like what was done with Diginotar. Edit: apparently they just revoked the intermediates.
+- Why isn't there a mechanism where a domain owner can specify which CA it allows? Similar to SPF which allows you to specify which mail server can represent you. It's kinda insane that foreign CAs can just fake anyone's certificate.",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"I meant that for a compromised TLD key, the DS record at root lasts for a day. So I didn’t follow how the compromise in a theoretical DANE-only world would be inherently long-lasting.
+You said “no recourse,” which I took to mean no recourse even if known. I don’t follow that. The key/DS record at root can be changed. There may not be a “TLD death penalty,” but the key could be changed.
+Now without CT it may be tougher to know about the compromise. For websites that don’t have the luxury of certificate pinning, a compromise of TLD kills the whole thing, at least for a time.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"parents are a huge factor, yes, but what you've said is not an absolute.
+my dad was an abusive alcoholic. i have never laid a hand on my kids. i am not just like my dad.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"I was on the iPadOS 26 beta all summer (last year). Until early August I was convinced they would just cancel the release completely and roll back. Would've been the only good decision. But I guess the bad press they would've gotten for that was deemed more expensive than just releasing it.
+They cleaned up a lot of things with the minor 26.x releases and even more with 27.0, but it's still years away from being done.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"It's a trade-off.  It could be a setting, but if one adds too many settings then the space of possible options gets huge and bloated leading to bugs and complexity for the users and I already barely know how to use iPadOS.
+""If you ask a user what percentage of Word features they use, they will tell you 10%. But if you ask multiple users which 10% they use, they will all give you a different 10%.""",argued,"pre-labelled by Claude, not yet reviewed by me"
+"It turns out that liberalism is a metastable state between dictatorship of the proletariat and dictatorship of the owner class. But then, I think Marx could have told you that a century and three quarters ago...",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"It's a project based on vLLM, explain why you consider it a total game changer?",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Somehow they read ""learning a musical instrument"" as ""majoring in music"".",asserted,"pre-labelled by Claude, not yet reviewed by me"
+Administering your hidden service?,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"A high margin luxury good with huge r&d costs is a death spiral.
+A high per-user r&d means high costs per user. So then users leave to save a buck, qnd the price goes up again for the remaining users.
+Maybe it works out OK if you want to signal wealth - the high price is the selling point. But luxury pure utility is a hard sell to consumers, and for luxury B2B it's about high touch sales (e.g. Oracle).",asserted,"pre-labelled by Claude, not yet reviewed by me"
+Reminded me of this comedy skit: https://www.youtube.com/watch?v=fibDNwF8bjs,chatter,"pre-labelled by Claude, not yet reviewed by me"
+So can I work from home then instead?,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"All I get is ""City Hall can't load here. Error loading the game: PP-LOAD-1C59.""
+I can't tell if this is a real error or satire, lol",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"I mean we can't know where they'd be in the counterfactual scenario. Glancing at Shell and Exxon shows BP is probably underperforming similar companies. How much of that is due to this event vs. other factors? I don't know. We wouldn't tend to expect the same extent of up-and-to-the-right behavior from dividend producing shares but BP seem to be failing to capitalize on the current oil price spike.
+My point is merely that reasonable people can disagree if there was a suitable consequence to the event. Sure they're out 140 billion, but to a company like this that's not as grand as it sounds and not at all fatal. You provided your view, I am providing mine, which is that they did not suffer sufficiently.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Sure, but even if he provides no solutions, providing insight into the problems is a worthwhile contribution.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+Survive..and how to be happy with less.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Pixel 10 with 158.0.1 still connects to the emSign ones, even though the patch notes for 158.0.1 mention that it updates the CRL for those without 'Remote Improvements' enabled?
+edit: Disabling all the eMudhra CAs in Android settings does nothing, cool?
+edit: I guess there's no way to manually ask for CRL update, cool??
+edit: Gave up and reinstalled Firefox. Seems to be fine now.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Interesting, Amazon doing the same for AWS Trainium.
+https://github.com/aws-neuron/torch-neuronx",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Democracy never handles situations well where one side of an issue is a small highly motivated group, and the other side is a larger group that kinda-cares.
+It's the reason we subsidize farmers. It's the reason our tax code remains so complicated. It's also why it's hard to get anything built: Existing owners are highly motivated to block development, and the potential beneficiaries (people who might someday live there, etc.) are too diffuse to mount a defense against them.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"This seems to hold true for most people. One of my close friends (a successful founder) was an early adopter of the iPad Pro, and intended to make it his go-to device for traveling. He ended up buying the Magic Keyboard case, a USB-C dongle for HDMI out, and the Apple Pencil to comprise a proper Rube Goldberg travel experience.
+After months of suffering through that, he switched back to a Macbook Air and carries the iPad for watching Plex now. I am still baffled as to which ""pros"" the iPad Pro is targeting.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+Is it possible someone just tried to serve five terabytes?,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Kind of sad comedy that when someone says ""The US invaded a country for its oil"" it is entirely unclear what the country is.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"I mean, it's an emergency, but the acute severity is debatable; many times a month the major browsers quietly deal with vulnerabilities that yield attackers direct control of victim computers; here, attackers get the ability to spoof websites if they're in a position to hijack connections.
+The middlebox situation, with non-updatable roots, is very annoying. But middleboxes also have unfixable RCEs, so...
+It's totally fair to evaluate different projects by how well positioned they are to update their WebPKI trust anchors. I'm just saying, keep perspective.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Sure, but what do we do from here?  Attempt to augment it with technology so that it starts scaling again, or give up and replace it with something centralized?",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"I'd argue the account given in the blog post disagrees with what you're saying. 
+Up until recently the OS did exactly what the OP wanted:
+> I rely heavily on writing on handouts from my iPad, projected via AirPlay to an external screen that my students can see. When I’m doing this, my iPad is also doing many other things: controlling a PowerPoint presentation on my Mac, showing me notes that I’ve taken on points I want to mention and students I want to call on, and showing me the results of polls before I reveal them to the class.
+That's not a crippled OS. And he's using it professionally so ""Pro"" doesn't seem inappropriate. The way the author describes what they're doing, it's difficult to see a laptop replacing it.",argued,"pre-labelled by Claude, not yet reviewed by me"
+Not antagonizing but curious: how else would you do it?,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"If you can see this, you're affected. Update your system trust store immediately.
+https://dv-g3b-emudhra.we-have-a-problem.com/",argued,"pre-labelled by Claude, not yet reviewed by me"
+"One of the fascinating dynamics around Chinese open-weights models is the competition among American (and some European) inference providers to deliver the best inference performance on them. They've increasingly beaten the Chinese model makers themselves on inference throughput and latency.
+Together.ai, Baseten, and others have already achieved higher throughput, lower latency, and lower E2E latency for DeepSeek V4.1 Flash 1017 than DeepSeek's own inference service.
+https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Because when inference providers user/learn from this engine, their prices will go down, causing commercial API pricing from closed source providers to go down, hurting their net revenue.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"The situation is even worse than I thought.
+They hold intermediate certificates issued by TWO different root CAs, neither of which they operate.
+So two separate entities didn't bother to read their certificate policy or inspect their operations. Have we not learned anything from past mistakes?
+Roots should be responsible for all their sub-CAs, full stop. If they don't trust them enough to accept that responsibility, then the system is broken.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"The one-dimensional mentality of anti-intellectualism is absurd. I have heard parents outside of our school but in my community talk down French Immersion programs (versus English schooling) saying that people put their children in for the wrong reasons. I don’t know what the explicit reasons were in this case, but I am assuming that the other parent means academic overachievement.
+Learning calculus or French can be beneficial, especially when the glass ceiling in certain workplaces is whether or not you’re bilingual. However, the point that’s getting missed is the metaexperience that consciously or subconsciously shapes the way the child interacts with the world later on.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> My mum was a mechanic, my dad was a mechanic/truck driver.
+My grandfather and uncle were mechanics...
+Mona Lisa Vito, is that you?",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"What’s funny is that it’s not the public or even the board that is demanding that Apple release whiz-bang moonshot software features every year. Users do want shiny new hardware, but besides necessary hardware drivers, 90% of users LOVE it when the core OS and the UI stays stable for years. So they can get used to it. Instead of reshuffling the UI of every app every 12 months like iOS has been doing for 10 years. And evolving the visuals in big and small ways constantly. Both of these are not fooling anyone into overestimating Apple’s innovativeness.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"A nuclear bomb
+""Based on this framework, we have achieved high-throughput, low-latency large-scale inference services for DeepSeek V4.1 Flash. Currently, the service throughput of a single cluster is 155 trillion tokens/day, and the overall revenue is $38 per card per hour (at off-peak pricing)""
+Source: https://zhuanlan.zhihu.com/p/2095560295930508953",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Didn't Ofcom send multiple threat letters to 4chan, requesting they comply with UK laws? That counts as trying to enforce it",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Ignoring all the slop out there, we are seeing AI being sent to reverse engineer, accelerate projects, etc.
+According to Greek economist and former finance minister Yanis Varoufakis, an open source AI strategy is one way a capitalist economy can avoid the rent trap (platforms being created, monopolizing resources, and extracting ever higher rents from everyone else).
+https://www.yanisvaroufakis.eu/2026/08/31/ai-is-reviving-chi...",argued,"pre-labelled by Claude, not yet reviewed by me"
+"It could be that they're doing what Microsoft did 10 years ago, they fired all their QA teams and replaced them with automatic tests and telemetry. It's part of the reason Windows breaks so much these days.
+I'm sure they saved a ton of money though.
+> [iPhone 4] How did no one ever pick up the phone and hold it in their damn hand?
+That's well documented, all their field testing models were disguised as iPhone 3Gs with a rubber case around them. Gizmodo got their hands on one from a drunk engineer who left it in a bar.
+So they didn't actually touch it with their bare hands ever, outside of the office at least.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"That sounds like a made-up story, given that in 2011 the major impediment to the CA HSR wasn't bureaucracy, it was politics, and the CA HSR authority hadn't yet put any portion of the HSR rail out to bid.
+Also, the French company (Alstom) that helped build the Morocco HSR is currently bidding to build the CA HSR...",argued,"pre-labelled by Claude, not yet reviewed by me"
+"> “We typically confuse why something claims it exists, ie to glorify God, vs the forces that actually perpetuate it, which are subtler, we’d prefer not spoken aloud, and more prosaic, ie endowments, prestige, and needing someone to watch one’s kids.”
+Stafford Beer wrote that the purpose of a system is not its declared intent but what it does - what it manifests, causes or how it behaves (1979, 2001). Higher education has a lofty purpose, but the system manifests as a Defence Contractor among other things like teaching one’s kids. “We’d prefer not spoken aloud” is probably true.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"> typescript added human readability
+Ehm no, added type safety, and dealing with a type checker it's exactly what agents need.
+> if no human is coding
+Nope outside the bubble there are many still hand coding(me too)
+> I guess it will be soon that typescript won’t matter anymore since agents will be writing code is Rust
+Oh hold on a second isn't Rust the same as Typescript ""adding human readability""?! Why not trashing Rust and just have LLMs output WASM directly? XD Wasm which is basically useless outside the browser or some microvms on the edge, and in the browser you don't even have an interface for directly rendering anything and still have to deal with the dom
+You either are highly non technical, very junior or I just don't know",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"It doesn't have to, you can set X509 name constraints which say ""the CA may only issue/may not issue certificates for these Subjects,"" or you can set CAA in DNS, for example.
+(Of course, the former isn't really intended to constrain trusted Root CAs, moreso internal PKIs. But it is an option people should know about!)",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Also on front HN page is https://kaba.cx/posts/20261020_Tor/ on how 300 tor exit nodes were compromised.
+In that case it was ssh sessions being intercepted.
+But my question is if a tor exit node or a vpn provider or your internet provider has a private key to any CA then can they mitm any normal web traffic even though it will show up as https without warnings in your browser?",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"When European governments say they will lead in technology regulation, this is what they mean.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"I bank with HSBC. Everything is up and working.
+A lot of the information people are leveraging here comes from Downdetector which is mostly users reporting that stuff is down, not whether they are actually down. It's a really bad source.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Apple breaks stuff all the time. I sometimes wonder if they even have automated testing.
+Airplay and everything around it is flaky AF. For me, when Tahoe came out Airplay stopped working for me for ~3 months. After it came back, Airplay continued to just decide to disconnect randomly for me, all the time. I'd extend my screen via my AppleTV, 2, 5, 10 minute later it would just suddenly disconnect.
+A long standing bug, last night on Golden Gate, I extended to TV via Airplay. Then later turned it off. The dock disappeared and was in auto-hide mode (I don't use auto-hide mode). I go into setting and clearly auto-hide mode is off. Toggle in on and back off to fix. This bug has been there for 5+ years?",argued,"pre-labelled by Claude, not yet reviewed by me"
+"As the RFC says, MTA-STS exists in part to work around the fact that email providers generally don't do DANE.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Not sure what you are promoting here. The ""open"" model currently seems to work, if you a) burn outsized amounts of money that you have in the bank, in an attempt to get good eventually (Meta) or b) distill other models.
+Both ask for a fairly narrow definition of what constitutes a good idea. There is plenty indication that both Meta and all of the Chinese labs will go closed, as soon as that path makes more economical sense for them. They are certainly already steering in that direction.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"What stops our adding a record that requires DANE and a conventional CA? (Preload it like HSTS, if you'd like, to prevent US IC downgrade attacks if people stupidly configure DNSSEC to fail open.)
+This way, fuckups like this CA can't hurt me because they couldn't break DANE and IC couldn't hurt me (more than they can already) because WebPKI would have to approve too.
+I don't think the CA death penalty addresses the problem. Just as in the physical world, the death penalty isn't a perfect deterrent.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"The prohibition against inciting violence has nothing to do with whether or not the speaker is a government entity.
+Indeed, I think you should look at the speech that SCOTUS ruled is protected in the landmark Brandenburg v Ohio[0] case to see how extremely narrow the ""imminent lawless action"" standard is. It's ridiculously hateful and inflammatory, and filled with several non-specific threats of violence against minority groups. This was labelled protected speech. Brandenburg was a private citizen here, and he prevailed over the state of Ohio.
+[0]: https://en.wikipedia.org/wiki/Brandenburg_v._Ohio",argued,"pre-labelled by Claude, not yet reviewed by me"
+"I wonder how more frustrating is it to work on the compiler in rust vs go.
+IIRC at the time of the port to go they wanted fast test and compile time, of course it's a different era now.",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"> It is clear from the beginning that the Chinese Open Model are a proxy for economic warfare.
+I mean, what would you expect? Like USA isn't openly planning to weaponize their current AI primacy [1, 2].
+[1] https://www.whitehouse.gov/presidential-actions/2025/07/prom...
+[2] https://www.whitehouse.gov/wp-content/uploads/2025/07/Americ...",argued,"pre-labelled by Claude, not yet reviewed by me"
+"One, they quite literally do not live in the city. Most of them live in the very rich ex-urbs. Their retainers, too, do not live in the city, not even in the penthouses. They live in places like Alpharetta and Cobb.
+Two, and more importantly, the issue is with their disproportionate influence. If we lived in a perfect world where your regular-degular corporate lawyer had the same say in politics as anybody else, sure, you'd have a point. But it's been more than a decade since Citizen's United (https://www.brennancenter.org/topics/money-politics/influenc...) and so that's not even close to reality: https://capitalbnews.org/georgia-lawmakers-real-estate-inves...",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Are you saying it is sad that American courts do not enforce foreign laws if they violate the US constitution? If so, then are you in favor of Russian, Chinese, various Muslim countries' laws being enforced in the US?",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Pardon my ignorance, but who else besides Google has TPUs? Are they commercially available somewhere? What’s their main application right now outside of Google?",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Well, no, not exactly. The article says vscode is compiled in 5.28s in typescript 7.1 (nightly), and in 1.73s  in tsrs (dev), which is 3x faster.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"It's possible. If goog's AI overview is accurate, it seems somewhat similar to speculative euphoria seen in the past (eg companies involved in electricity prior to the great depression). It's larger (currently 35% for AI versus 25% for electric/related cos), I'm guessing because of more credit. At the same time, the housing component of the market prior to the GFC was about 23%, and it wasn't as economically damaging as the GD, so hopefully the AI bubble unwinding won't be as bad.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"I had a friend who worked in university IT and I got the impression that there was a strong desire to use ""supported"" products (in general, not just certificates) even if it cost money and was worse than free alternatives.
+Interestingly, InCommon used Sectigo prior to this year. I'm guessing eMudhra costs less.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> they were built by distilling the world's knowledge and cultural products
+... and a bunch of RLHF and proprietary training data etc etc, but regardless, this is still an exceptionally expensive process, that someone somewhere is paying for.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Closed model means I'm immediately not interested. There are lots of closed STT/TTS models that are insanely good, better than any open model, so unless this is open then not sure I'd ever use this.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"so this is software now?
+youtuber vibe codes a transpiler says they're not going to bother maintaining it - but big company like cloudflare takes it seriously enough to absorbe into their own official services.
+What is happening?
+What is even software dev anymore?
+What didnt the labs or cloudflare do this themselves, I mean they did, but then if it's all vibe coded, why do they need someone else's vibe coded stuff?
+How is any of this serious?",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Ah yes, Azure is the undisputed heavy weight champion of ticking theoretical  boxes.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Nope. You can find this from the Chrome Root Program.
+> Because no TLS certificates chaining to these six intermediate CAs were logged to CT prior to our CRLSet block on October 17, no fraudulent certificates issued by these CAs could have been trusted by default in Chrome or other CT-enforcing browsers.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Love this quote:
+Inclusion in the Chrome Root Store requires that a CA Owner continuously demonstrate the technical competence and operational rigor necessary to protect Chrome users. Due to the seriousness of this incident, the Chrome Root Program is conducting a thorough evaluation regarding the status of eMudhra’s remaining CA certificate to ensure these standards continue to be met. We will share further updates as our review progresses.
+from a post on https://groups.google.com/a/mozilla.org/g/dev-security-polic...",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"We might never know, but they probably didn't read the news and started working to get this out, they were probably working on it for a while now.
+Personally the question is if they are ""saving"" other projects or news so they can be released in case a competitor makes a move? Who knows if this was ready days or weeks ago and were waiting on someone to drop some news, so they can shadow those news.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"You really cited a tech politics person, and Anthropic... The poltical AI people are the exact type of cope distributors I complained about above.
+I think the more reasonable explanation is this is totally made up. Notice how they use examples concerning ""cyber and bio"" notice how the examples are politically loaded subjects that are hyper relevant to proposed AI dangers and why we need to protect western AI companies with anti-competitive regulations?
+Oh no!!! The scary asians are distilling our models, but they only want the scary things!!! They want to hurt you!! We better stop the scary asians!!!
+You need to up your media literacy.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+">Afaik, even Russia and Ukraine aren't having such issues while dealing with data centres getting droned, lol.
+Not having issues is overstatment, but Ukraine has a cheat of having a backup DC on NATO soil, which helps a lot.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Author here :)
+TLDR: on Oct 2, 333 exits (~10% of Tor exits) started redirecting port 22 to 12 interception servers running a paramiko-based MITM that stole passwords and tried to drop Ebury on the target.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"You said something interesting: ""... modern life requires accidents like this.""
+This is a completely baseless claim. It is entirely possible to have both a technologically advanced civilization and simultaneously one that doesn't have catastrophic industrial mistakes like this.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Inference is very profitible when you can deal with the batch sizes Anthropic, Deepseek and OpenAI are dealing with, renting GPUs for inference is even more profitible.
+The US is dealing with different tax code where buying GPUs function as as great way to offset taxes, and having boatloads of debt is rewarded in many cases. I think there's lots more (crooked) reasons why inference is even more profitible in the US.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+New version of PocketTTS is apparently censored: https://github.com/kyutai-labs/pocket-tts/issues/390,argued,"pre-labelled by Claude, not yet reviewed by me"
+"Strategy shifted, will focus less on code other than basics, but I'm still going to teach my daughter how to reason and problem solve.
+Learning what you want to create and how it should generally be done is a learned skill, and it helps it other parts of life.
+Nothing to do with code, and it's a superpower in the age of ai. Someone has to talk to the AI for money.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"I very much doubt it.  For consumers it is all about cost.  Heating in winter with Natural Gas is 1/3 the price of electricity and much cheaper than Oil.
+To get people off of fossil fuels, remove oil subsidizes and tax fossil fuels a lot.  Otherwise moving to renewals will take a very long time.
+And yes, we can put up solar panels on your house, but that cost $ which people do not have.  Solar Panels should be subsidized in an easy manner for people to get funds for installation.",argued,"hard case: argued vs asserted (unsourced number); pre-labelled by Claude, not yet reviewed by me"
+"I’d argue that education is not a problem that can be solved. Because it involves people and people learn differently and different generations learn differently.
+The way to make an idea relatable today is different from 100 or 1000 years ago. The lessons may be timeless, but gaining the lesson is a personal experience.
+The conclusion I currently have is that “education starts in the home”. School teaches information that everyone should know but the process starts within a household and community. So I don’t see a generalized solution for education.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"As another comment pointed out - total cost to BP over this is somewhere in excess of $140BN. It's hardly ""free of consequence"".",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Go ahead, expand on that. If you have a functional AI that delivers on the majority of what AI companies promise, can you explain why you would not be better off asking it what to do in most cases?
+It's certainly possible, and even likely, that AI companies will fail to deliver, but let's assume for a moment that they don't crash and burn.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Deepseek released just enough to stir the pot but not enough to cook your own from scratch.
+Wake me up when we can clone, point it at a dozen H100s we own, and get a working production service.
+Anthropic and OpenAI will do just fine.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"They said race conditions and specifically exempted data races. You can absolutely write race conditions in rust, they're a logic bug.
+As an example, let's say you have two functions A and B. A only works properly if B has never ran for some reason. Let's say they both accept a reference to a value C, and B changes C's value somehow. Because this is rust, we can't have data races, so we wrap it in an ArcMutex or what have you. That doesn't impact the ordering of A and B at all.
+If we spawn threads that execute A and B at the same time, it's up to the scheduler if A functions properly.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Oh, wow, I wasn't aware. Weird choice...",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"What a change a month makes. Public discussion on eMudhra getting their own root CA inclusion ended and Mozilla had them slated for approval.
+https://bugzilla.mozilla.org/show_bug.cgi?id=1889859",argued,"pre-labelled by Claude, not yet reviewed by me"
+"> ""...Bill Gates were college dropouts, but the market deemed them good.""
+Gates had excellent grades and was credited in an academic paper during his undergraduate years.  Not exactly like the average dropout.
+> ""Now that I think of it, apparently Einstein was a mediocre student, but his contributions to science were his way out.
+""
+That's a myth.  Einstein got top grades in science and mathematics.
+As for the original question, ""If you wish to build a ship, do not divide the men into teams and send them to the forest to cut wood. Instead, teach them to long for the vast and endless sea."", incorrectly attributed to Antoine de Saint-Exupéry",argued,"pre-labelled by Claude, not yet reviewed by me"
+"> After Wayne's report of key recovery, I was able to recover the private keys for the impacted keys trivially. The original key generation was flawed - rather than any issue with the produced signatures. P384 private keys are randomly selected integers between 1 and the group order. The 8 impacted keys all used integers less than 256. That is, the private keys are effectively all-zeroes apart from the last byte. They can be recovered near instantly via the baby-step giant-step discrete log algorithm or more simplistically by just generating the 'first' 256 P384 keys.
+Yeah that’s just oof. Not hard to imagine the kind of code error that could cause this, but hard to imagine that any serious vendor of cryptography hardware or software could make a mistake like this.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Just another tour de force from DeepSeek.
+I'm not saying that the US labs (Anthropic, OpenAI, and Meta) aren't pulling their weight, they are all doing amazing work as well, but Deepseek may belong in that tier.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+It's not particularly surprising. China wants people to use electricity. Germany wants people to use gas/oil. The rate of electrification in respective country reflects that preference.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"If you're responsible for PHP client software, and waiting on composer/ca-bundle to release a new update, be aware that https://github.com/paragonie/certainty has been updated with the 2026-10-20 bundle already.",argued,"pre-labelled by Claude, not yet reviewed by me"
+">become a good person
+>become a good citizen
+>make the world better
+That's basically the whole game right there.  Or as Hillel might say, the rest is commentary.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+And that's a fine argument to make! But this stupid garden analogy is nonsense.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"My mouth is at: I don't want to be exposed to anything related to Musk.
+My mind is at: Even though it's overvalued, it will likely keep climbing and won't crash.
+Where is the market at?",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"This was a fairly stupid case. Ofcom didn't try to enforce it abroad, 4chan sued Ofcom in case it did (mostly for PR purposes).
+Ofcom knows its rulings don't apply internationally.
+So yes, the status quo is enforced by the US courts, as if it was ever in doubt and nothing at all has changed.",argued,"pre-labelled by Claude, not yet reviewed by me"
+Looks like Codex just happened to add support for this: https://x.com/thsottiaux/status/2112712984644784534,argued,"pre-labelled by Claude, not yet reviewed by me"
+"so if the moat isn't the model and the moat isn't the inference layer, i guess the moat is the hardware now? what does this mean for frontier labs?",chatter,"pre-labelled by Claude, not yet reviewed by me"
+Shopping as a family activity? That sounds very odd.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> It may take a minute or two for access for 90.8.226.75 to become effective
+Exciting... feel like I'm back in '96, having to wait two minutes for the page to load.",chatter,"pre-labelled by Claude, not yet reviewed by me"
+No non-technical user in their right mind will be trying to vibecode an OS and flashing it to some random off-brand tablet anytime soon.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> I wish them luck in that important work. In the meantime, we Americans have plenty more work to do on this side of the pond to protect our border and prevent the British, Australian, Russian, and other foreign censorship regimes from crossing it.
+We got our own problems with Authoritarianism. There is no need to protect our borders from something our own government and corporations are practicing day in and day out on our own people, in our own country. You might want to acknowledge that first, before assuming we got problems across the pond.
+And BTW the real answer is to enforce antitrust and put an end to Citizens United to prevent money from flowing into our political institutions and reign in these corrupt business. You might want to add that as well to your point about the  GRANITE Act",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Right? Just because my professional career never took me in those directions doesn't mean I want to foreclose them for my kid! I did do electrical engineering classes in college wherein I needed calculus, I just never took a derivative/integral after graduation because I ended up on the coding side of a Computer Engineering degree.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"DeepSeek doesn't really care about models, they're aiming to become a platform: https://try.works/a-follow-up-on-china's-open-ai-race",argued,"pre-labelled by Claude, not yet reviewed by me"
+"When it solves your problem. I don’t think it makes sense to globally qualify a model as “good enough” any more than it does with programming languages. Python is good enough for a web app, but not for an OS kernel.
+To your point, I think we’re past the hump on the Pareto distribution. The models are good enough for most things, and the rate they’re improving at the things they’re bad at is dropping. The odds a new model is good at something the old one was bad it is okay, the odds it’s something you care about is dropping. It makes a lot of sense to discriminate on price rather than features in that environment.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> companies that might have reservations about chinese models having training backdoor are getting tools to train its own
+This release is an inference stack, not training.
+> the tricks deepseek uses to make building them faster can now be used by more companies, increasing competition even further.
+But again, this is just inference, and specific to DeepSeek models. DeepSeek models are already dirt cheap on OpenRouter at pricing / speeds comparable to or better than DeepSeek's first party endpoint which uses this stack.
+Yes, this repo will help others optimize inference, but it's nowhere near the hype being proclaimed in this thread.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"What would it even look like for education to be “solved”? I think if you put 10 people in a room and asked them what the purpose of education was, you’d get 10 different answers.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+idk man 2008 didn't affect me much directly,asserted,"pre-labelled by Claude, not yet reviewed by me"
+How much oil would they have to burn for fuel to do that? Neither option sounds good for the environment.,chatter,"pre-labelled by Claude, not yet reviewed by me"
+Cool. So 4chan is going to get DNS blocked in the UK and I can finally stop hearing about this and all the Americans takes on what my country's enforcement mechanisms should be.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"That does not matter so much anymore, when Huawei starts selling those NPUs for a fraction of the NVIDIA price. It's all downhill from there on for OpenAI, Anthropic and NVIDIA.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"""Wealthy people"" alone is also consistent with ""not many people"". There aren't that many rich people in general, musicians or otherwise.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+Teach him to be rich. That's all that matters from now on. That's the only measure of merit. He can buy IQ by the token.,asserted,"pre-labelled by Claude, not yet reviewed by me"
+Anyone have a mirror for the first link? It served me a page assumedly intended for AI scrapers and then promptly blocked me when I refreshed a few times.,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"At this point, the way I see it is:
+- There's AWS
+- There's Azure
+- There's everything else
+And I don't even use Azure, I just hear it's good (and they don't charge cross-AZ traffic)",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"The EU should really prioritise building AWS and Google Cloud alternatives with European values.
+> ssh root@eu-cloud
+  We value your privacy. We and our 847 partners track your network packets.
+
+  [Accept all]  [Manage preferences]",chatter,"pre-labelled by Claude, not yet reviewed by me"
+">P(C | private elementary) = 5P(C | affluent public schools) = 35 P(C)
+That can’t be true. A group’s probability cannot exceed the overall probability by more than the reciprocal of its population share. A 35× ratio therefore requires the group to represent at most 2.86% of the relevant population. For comparison, NCES reported that 9.3% of students in grades 1–5 attended private schools in 2016.",argued,"pre-labelled by Claude, not yet reviewed by me"
+True they can also get information from the public ssh key like if you used a real email address or name to start spear phishing or who knows what else like extortion threats to your company,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Every cert an attacker issues with eMudhra's private key has to appear in the CT logs if they want it to validate in a modern browser.
+But if you only want to MITM the connection used by 'pip' to install python wheels - that doesn't check for CT records at all.",argued,"pre-labelled by Claude, not yet reviewed by me"
+Here is TTS under 4M: https://huggingface.co/owensong/Inflect-Nano-v2,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"If you want really accurate timestamps, the current state of the art is to ask claude to implement forced alignment using a CTC transcription model. It uses the logprobs of a character based transcription model to find the best matching overlap. I've used this technique to generate sync files for epub/audiobooks and it's really good even when the data is dirty.
+This method aligns the transcript of a 60 hour book in 20 minutes on my GPU using Parakeet CTC 0.6B which is english only, but there's similarly sized models in other languages, the models don't need to be that good at transcribing to generate good alignments.",argued,"pre-labelled by Claude, not yet reviewed by me"
+it doesn't seem like there's an abundance of shovels coming anytime soon,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"I 100% agree and am a big fan of DS V4.1 Flash in general for this reason, but I'll add my own caveat: Sol 6.1 isn't far behind on completion time for tasks because it's so damn efficient. I regularly get ~300 tokens/sec with DeepSeek Flash, but it spends the majority of that time thinking and executing slow commands one by one, whereas Sol thinks less and is much smarter about the commands it runs, resulting in far fewer turns to get the same thing done. For highly agentic tasks, DS might only be ~25-50% faster, not 500% as the TPS may suggest.
+(But to be clear: 25-50% faster is still a big win in my book.)",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Interesting how a comment asking about the reasoning behind releasing this as open source is getting attacked, as if doing a good thing should not ever be questioned. I do wonder of China's motives behind this as well.
+The government would not allow this open work if it did not benefit them somehow, or perhaps they feel that keeping it closed is not very important right now (maybe because they are somewhat behind the frontier).
+Comparing a university student Torvalds and state actors open sourcing code is pretty naive...",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> Unfortunately, Apple gets to decide what is the correct behavior, not the user.
+Apple used to put a lot of money into user experience to get the behavior correct for the users. Presentations are an important niche that that group wouldn't have ignored.  What is correct presentations is probably wrong for everything else - but you still need to make that group work correctly since it is important.
+I'm not sure what happened to user experience groups everywhere.  They seem to have lost and the world is worse for it.  Though at least they did set some good patterns that remain to this day - but only because the people in charge haven't changed it.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Humans are generally considered to have been around for only ca. 300'000 years.
+Also, the interpersonal web of trust is IMHO quite clearly failing in the age of mass media, and not just recently.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Certainly no more heavily than the US polices its own ""assets"" - we also have export controls on inferencing hardware, review periods on frontier model releases, export bans on Fable/Mythos, etc.
+It's pretty evident from their actions that China doesn't consider this an arms race in quite the same way a lot of the US crowd does. Rather it's an economic conflict: one in which flooding the market with cheap inference might bankrupt a bunch of over-leveraged US tech firms (and in doing so put serious brakes on the whole US economy)",argued,"pre-labelled by Claude, not yet reviewed by me"
+"20 merge requests in the last two hours. And all look somewhat reasonable on first glance.
+I am happy for not maintaining a relevant open-source repo.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Did you? GitHub link? because that would be awesome! which asm target did you pick? I looked at using LLVMs' LVM because I didn't want to have to choose ARM or x86? What are some of the trade-offs you made along the way? Wait, are you making a joke and think you're funny? (Hate to be the bearer of bad news but you're not.)",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"It wasn't enormous enough in fines, since they're still in business and capable of doing it again, and again surviving such fines.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Sure, but that size/token is inherent to the model.  Part of DeepSeek's hosting advantage, and thus a remaining part of their moat, is migrating KV cache from VRAM to host RAM to nonvolatile storage, and presumably routing requests to where KV cache has migrated.  People here on HN say KV cache lifetimes can be 8+ hours with DeepSeek, and I don't know of any other provider that can match that.  That infrastructure isn't part of this open-source release.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Apple Music has a dedicated button to add a song to favourites, which I use. When I plug my phone in my car I can then say “play my favourites” and it plays it.
+Until I’ve upgraded to iOS 27 and after saying “play my favourites” the phone responds now with “playing FAMILY favourites” (no idea what that means) and plays some random songs.
+Incredibly annoying, great example of trying to be too clever for its own good.",argued,"hard case: argued vs asserted (personal anecdote with a specific detail); pre-labelled by Claude, not yet reviewed by me"
+"> Nothing about that is new.
+Now we’re both wrong!
+The French are now using submarines (striking distance and speed, blah blah)
+and are apparently being looked at as the leader of “forward deterrence” in the region.
+https://tvpworld.com/93637117/frances-nuclear-umbrella-which...",argued,"pre-labelled by Claude, not yet reviewed by me"

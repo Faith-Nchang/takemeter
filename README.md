@@ -103,48 +103,52 @@ Cross out the specific fact and read what's left. If the conclusion stands just 
 
 ## The Dataset
 
-<!-- Where you collected from, how you labelled, your counts, and three hard
-     cases. -->
+**Where the posts came from:** 200 public Hacker News comments from 12 front-page threads on 2026-10-20 (AI inference, a certificate-authority compromise, iPad software, UK speech law, a cloud outage, parenting, housing and others), pulled through the public HN search API (`hn.algolia.com/api/v1`). Whole comments, no trimming, no usernames kept. I only drew from comments of 3 to 150 words, so very long comments are missing. I sampled so that long and short comments were both included, and I took every `argued` comment I found, because it is the rarest label. That means the label mix below is *not* what a random HN thread looks like: `asserted` is closer to two thirds of the 330 comments I labeled before choosing these 200.
 
-**Where the posts came from:**
-
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+**How I labelled them:** I did not label these cold. Claude read 330 sampled comments and applied my definitions and decision rule, and I took the 200 rows below from them. Every row's `note` says it was pre-labelled by Claude and not yet reviewed by me. <!-- TODO before submitting: read every row yourself, fix the labels you disagree with, relabel 20 rows with no help and set their note to `cold`, and update this paragraph to say what you changed. -->
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| `asserted` | 92 | 46% |
+| `argued` | 60 | 30% |
+| `chatter` | 48 | 24% |
+| **Total** | 200 | 100% |
+
+One thing to watch: `argued` comments are longer (median about 57 words, against about 39 for `asserted` and about 20 for `chatter`), so a model could lean on length instead of evidence.
 
 **Three hard cases**
 
-<!-- Any post that made you pause: what it was, which two labels it could have
-     been, and what you chose. These are worth more than the easy 190. -->
-
 **1.**
 > *The post:*
+> > "A computer can never be held accountable, therefore a computer must never make a management decision."
+> Legendary quote from an internal 1979 IBM training document [1]
+> https://simonwillison.net/2025/Feb/3/a-computer-can-never-be...
 >
-> *Could have been:*
+> *Could have been:* `argued` or `chatter`
 >
-> *I chose, because:*
+> *I chose:* `chatter`, because the quote and link are the whole comment. It never says what the quote proves. Under my secondary rule a bare quote or link is `chatter`.
 
 **2.**
 > *The post:*
+> I very much doubt it.  For consumers it is all about cost.  Heating in winter with Natural Gas is 1/3 the price of electricity and much cheaper than Oil.
+> To get people off of fossil fuels, remove oil subsidizes and tax fossil fuels a lot.  Otherwise moving to renewals will take a very long time.
+> And yes, we can put up solar panels on your house, but that cost $ which people do not have.  Solar Panels should be subsidized in an easy manner for people to get funds for installation.
 >
-> *Could have been:*
+> *Could have been:* `argued` or `asserted`
 >
-> *I chose, because:*
+> *I chose:* `argued`, because "1/3 the price of electricity" is a checkable number and the argument (consumers decide on cost) rests on it. It is unsourced, so a stricter reading would say `asserted`.
 
 **3.**
 > *The post:*
+> Apple Music has a dedicated button to add a song to favourites, which I use. When I plug my phone in my car I can then say “play my favourites” and it plays it.
+> Until I’ve upgraded to iOS 27 and after saying “play my favourites” the phone responds now with “playing FAMILY favourites” (no idea what that means) and plays some random songs.
+> Incredibly annoying, great example of trying to be too clever for its own good.
 >
-> *Could have been:*
+> *Could have been:* `argued` or `asserted`
 >
-> *I chose, because:*
+> *I chose:* `argued`, because the specific behavior ("play my favourites" becoming "playing FAMILY favourites" after iOS 27) is a detail a stranger could reproduce, and the complaint depends on it. A vaguer "Siri is worse now" would have been `asserted`.
 
 ---
 
