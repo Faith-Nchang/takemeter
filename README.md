@@ -39,50 +39,65 @@
 
 ## What This Does
 
-<!-- Your community, and what your classifier sorts posts into. Three or four
-     sentences. -->
-
-
+TakeMeter sorts **Hacker News comments** (public threads on news.ycombinator.com, no login) by how much a comment *supports* what it says. Regulars know the difference between a comment that shows its work and one that just announces a conclusion, and a third kind that isn't making a claim at all. The classifier has three labels: `argued`, `asserted` and `chatter`.
 
 ---
 
 ## Label Taxonomy
 
-<!-- Each label: a one-sentence definition and two real examples from your
-     reading. Then your decision rule for the hardest boundary.
+Three labels. A comment is judged on what it does, not on its topic or tone.
 
-     The decision rule is worth a point on its own and it's the thing most
-     people leave out. Every taxonomy has a hardest boundary. Name yours. -->
+### `argued`
 
-### `label_one`
-
-**Definition:**
+**Definition:** makes a point and backs it with a specific, checkable fact (a number, date, quote, link, named example or reproducible detail) that carries the point.
 
 **Example 1:**
->
+> Scale is a big part of it.
+> Every minute, 500 hours of video are uploaded to YouTube.
+> Even Google can't afford to run the biggest baddest model on every single one of those hours.
 
 **Example 2:**
->
+> https://chaos.social/@fluepke/117474156947559280
+> Private keys can be trivially recovered from the public keys because they're tiny. I found D=156, flüpke found D=4.
+> Yes, that's the entire private key.
 
-### `label_two`
+### `asserted`
 
-**Definition:**
+**Definition:** states a claim, opinion or prediction with no support, or with support a stranger couldn't check ("in my experience", "I recall reading"). It might be true; it isn't argued.
 
 **Example 1:**
->
+> Cummings is an absolute crank. He had the opportunity to try and he ended up failing spectacularly, like Liz Truss or Yannis Varoufakis.
 
 **Example 2:**
->
+> No non-technical user in their right mind will be trying to vibecode an OS and flashing it to some random off-brand tablet anytime soon.
+
+### `chatter`
+
+**Definition:** asserts nothing: a genuine question, a joke, agreement or thanks, a plug, a bare pointer to a link.
+
+**Example 1:**
+> Maybe OP is on naughty list facing serious scrutiny during the postmortem review.
+
+**Example 2:**
+> Why do you posit that this is a lot more important than the Internet?
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** `argued` vs `asserted`.
+
+**The post that sits on it:**
+> People should prepare their kids to be happy adults, not just employed adults.
+> I recall reading of studies that found that a significant majority of adults who did not learn to play an instrument when they were young wish that they had.
+> Only a small minority of adults who did learn to play an instrument when young wish that they hadn't.
+
+It names a finding ("studies found...") so it *sounds* evidenced, but no study is named, no number given, and nobody could look it up from this text.
 
 **The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
+Cross out the specific fact and read what's left. If the conclusion stands just as well without it, the fact was decoration, so the comment is `asserted`. If the comment falls apart without it, the fact is doing the work, so it's `argued`. A fact only counts if a stranger could check it from the text alone: a number, a named source, a link, a date, a reproducible detail. "I recall reading", "studies show" and "in my experience" with nothing specific count as no fact at all.
 
-
+**Two secondary rules**
+- `asserted` vs `chatter`: if you can state the claim the comment is making in one sentence, it is `asserted`, even if it is phrased as a question or a joke ("Why would anyone use X?" implies a claim). A real question that asks for information is `chatter`.
+- `argued` vs `chatter`: a bare quote or link with no point attached is `chatter`. It becomes `argued` only when the comment says what the quote or link proves.
 
 ---
 
