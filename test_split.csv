@@ -1,0 +1,63 @@
+text,label,note
+"That does not matter so much anymore, when Huawei starts selling those NPUs for a fraction of the NVIDIA price. It's all downhill from there on for OpenAI, Anthropic and NVIDIA.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"This seems to hold true for most people. One of my close friends (a successful founder) was an early adopter of the iPad Pro, and intended to make it his go-to device for traveling. He ended up buying the Magic Keyboard case, a USB-C dongle for HDMI out, and the Apple Pencil to comprise a proper Rube Goldberg travel experience.
+After months of suffering through that, he switched back to a Macbook Air and carries the iPad for watching Plex now. I am still baffled as to which ""pros"" the iPad Pro is targeting.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Is there a way from within the VM, though, to determine if that hardware feature exists and is enabled? If you don't trust your VM provider, how do you trust them when they tell you they have that feature and it is enabled?",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Author here :)
+TLDR: on Oct 2, 333 exits (~10% of Tor exits) started redirecting port 22 to 12 interception servers running a paramiko-based MITM that stole passwords and tried to drop Ebury on the target.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"They said race conditions and specifically exempted data races. You can absolutely write race conditions in rust, they're a logic bug.
+As an example, let's say you have two functions A and B. A only works properly if B has never ran for some reason. Let's say they both accept a reference to a value C, and B changes C's value somehow. Because this is rust, we can't have data races, so we wrap it in an ArcMutex or what have you. That doesn't impact the ordering of A and B at all.
+If we spawn threads that execute A and B at the same time, it's up to the scheduler if A functions properly.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Not sure what you are promoting here. The ""open"" model currently seems to work, if you a) burn outsized amounts of money that you have in the bank, in an attempt to get good eventually (Meta) or b) distill other models.
+Both ask for a fairly narrow definition of what constitutes a good idea. There is plenty indication that both Meta and all of the Chinese labs will go closed, as soon as that path makes more economical sense for them. They are certainly already steering in that direction.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"A long time ago we decided as a society that in order for an engineer to sign off on physical designs, they have to take legal liability for them.
+No such process exists for a model to take a design seriously that can kill people.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Didn't Ofcom send multiple threat letters to 4chan, requesting they comply with UK laws? That counts as trying to enforce it",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"The most likely explanation is that they generated the weak key externally, imported it into the HSM, generated the CSR from it, and finally had Root CA sign it.
+A FIPS HSM does not forbid one to import keys into it.",argued,"pre-labelled by Claude, not yet reviewed by me"
+idk man 2008 didn't affect me much directly,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Just another tour de force from DeepSeek.
+I'm not saying that the US labs (Anthropic, OpenAI, and Meta) aren't pulling their weight, they are all doing amazing work as well, but Deepseek may belong in that tier.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> Nothing about that is new.
+Now we’re both wrong!
+The French are now using submarines (striking distance and speed, blah blah)
+and are apparently being looked at as the leader of “forward deterrence” in the region.
+https://tvpworld.com/93637117/frances-nuclear-umbrella-which...",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Love this quote:
+Inclusion in the Chrome Root Store requires that a CA Owner continuously demonstrate the technical competence and operational rigor necessary to protect Chrome users. Due to the seriousness of this incident, the Chrome Root Program is conducting a thorough evaluation regarding the status of eMudhra’s remaining CA certificate to ensure these standards continue to be met. We will share further updates as our review progresses.
+from a post on https://groups.google.com/a/mozilla.org/g/dev-security-polic...",chatter,"pre-labelled by Claude, not yet reviewed by me"
+Anyone have a mirror for the first link? It served me a page assumedly intended for AI scrapers and then promptly blocked me when I refreshed a few times.,chatter,"pre-labelled by Claude, not yet reviewed by me"
+Too bad they aren't public so we can't short them,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Wow, Voxtral 3 sounds so much more artificial and “AI” as compared to the old Voxtral 1 in the comparison clips on that page! I absolutely hated listening to the new one.
+Also, comparisons with Whisper always really tick me off. It’s not a dictation model so much as it is a transcription model. It’s really the only one you can use to capture incidental audio rather than one or more persons deliberately speaking into a microphone, e.g. the only one you can use to transcribe audio from surveillance footage or background audio recorders; it has a higher WER but it actually tries to capture everything (leading quite often to hallucination, unfortunately) whereas the other models they compare it against tune out background noise and dialog altogether, in my fairly extensive testing.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"parents are a huge factor, yes, but what you've said is not an absolute.
+my dad was an abusive alcoholic. i have never laid a hand on my kids. i am not just like my dad.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"I was on the iPadOS 26 beta all summer (last year). Until early August I was convinced they would just cancel the release completely and roll back. Would've been the only good decision. But I guess the bad press they would've gotten for that was deemed more expensive than just releasing it.
+They cleaned up a lot of things with the minor 26.x releases and even more with 27.0, but it's still years away from being done.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> Then why are the performance graphs the headliner topic in the article?
+If you’ve got it, flaunt it?
+> The WASM sandbox is barely a footnote.
+This one is a real head scratcher. The sandbox was clearly what set them on this path.
+Maybe they believe the performance gains are worthy of being discussed by themselves?",asserted,"pre-labelled by Claude, not yet reviewed by me"
+">P(C | private elementary) = 5P(C | affluent public schools) = 35 P(C)
+That can’t be true. A group’s probability cannot exceed the overall probability by more than the reciprocal of its population share. A 35× ratio therefore requires the group to represent at most 2.86% of the relevant population. For comparison, NCES reported that 9.3% of students in grades 1–5 attended private schools in 2016.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"It's a trade-off.  It could be a setting, but if one adds too many settings then the space of possible options gets huge and bloated leading to bugs and complexity for the users and I already barely know how to use iPadOS.
+""If you ask a user what percentage of Word features they use, they will tell you 10%. But if you ask multiple users which 10% they use, they will all give you a different 10%.""",argued,"pre-labelled by Claude, not yet reviewed by me"
+"Because when inference providers user/learn from this engine, their prices will go down, causing commercial API pricing from closed source providers to go down, hurting their net revenue.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"> It may take a minute or two for access for 90.8.226.75 to become effective
+Exciting... feel like I'm back in '96, having to wait two minutes for the page to load.",chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Deepseeks strategy is that each project must break even within 10 months.
+$38/hrs equals $320K in 10 months.
+Assume they only have 100 clusters, and as much as 40% operational costs. That would get them about $20M in 10 months, which I suspect is more than what 4.1 flash training has cost them.",argued,"pre-labelled by Claude, not yet reviewed by me"
+"> “We typically confuse why something claims it exists, ie to glorify God, vs the forces that actually perpetuate it, which are subtler, we’d prefer not spoken aloud, and more prosaic, ie endowments, prestige, and needing someone to watch one’s kids.”
+Stafford Beer wrote that the purpose of a system is not its declared intent but what it does - what it manifests, causes or how it behaves (1979, 2001). Higher education has a lofty purpose, but the system manifests as a Defence Contractor among other things like teaching one’s kids. “We’d prefer not spoken aloud” is probably true.",argued,"pre-labelled by Claude, not yet reviewed by me"
+Kinda funny to see hackernews clamouring to ban the Chinese models. Truly in the thrall of the frontier labs,asserted,"pre-labelled by Claude, not yet reviewed by me"
+"Also on front HN page is https://kaba.cx/posts/20261020_Tor/ on how 300 tor exit nodes were compromised.
+In that case it was ssh sessions being intercepted.
+But my question is if a tor exit node or a vpn provider or your internet provider has a private key to any CA then can they mitm any normal web traffic even though it will show up as https without warnings in your browser?",chatter,"pre-labelled by Claude, not yet reviewed by me"
+So can I work from home then instead?,chatter,"pre-labelled by Claude, not yet reviewed by me"
+"Right? Just because my professional career never took me in those directions doesn't mean I want to foreclose them for my kid! I did do electrical engineering classes in college wherein I needed calculus, I just never took a derivative/integral after graduation because I ended up on the coding side of a Computer Engineering degree.",asserted,"pre-labelled by Claude, not yet reviewed by me"
+"I'd argue the account given in the blog post disagrees with what you're saying. 
+Up until recently the OS did exactly what the OP wanted:
+> I rely heavily on writing on handouts from my iPad, projected via AirPlay to an external screen that my students can see. When I’m doing this, my iPad is also doing many other things: controlling a PowerPoint presentation on my Mac, showing me notes that I’ve taken on points I want to mention and students I want to call on, and showing me the results of polls before I reveal them to the class.
+That's not a crippled OS. And he's using it professionally so ""Pro"" doesn't seem inappropriate. The way the author describes what they're doing, it's difficult to see a laptop replacing it.",argued,"pre-labelled by Claude, not yet reviewed by me"

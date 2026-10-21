@@ -154,51 +154,39 @@ One thing to watch: `argued` comments are longer (median about 57 words, against
 
 ## The Training Run
 
-<!-- Your starting model, your settings, and anything you changed and why. -->
+**Base model:** `distilbert-base-uncased`, fine-tuned for 3-way classification.
 
-**Base model:**
+**Settings:** 3 epochs, learning rate 2e-5, batch size 16, 128 tokens per post, seed 42. Run on CPU (no GPU), PyTorch 2.14.1+cpu. Training took about 2.7 minutes.
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Anything I changed from the defaults, and why:** Nothing. Every hyperparameter is the notebook's default. I did not do the optional second run. I ran the notebook's section 1–5 code as a script (same code, same settings) because Jupyter isn't installed in my `.venv`.
 
-**Anything I changed from the defaults, and why:**
+**Split sizes:** 139 train / 31 validation / 30 test (stratified 70/15/15 by the notebook).
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+| Label | Train | Val | Test |
+|---|---|---|---|
+| `argued` | 42 | 9 | 9 |
+| `asserted` | 64 | 14 | 14 |
+| `chatter` | 33 | 8 | 7 |
 
+`chatter` has only 7 examples in the test split, under the notebook's threshold of 8, so its score will move a lot between seeds.
 
+I haven't studied the numbers yet; that's next unit's work. They are in `results.json`. On a first glance, the model never got a `chatter` post right on this split.
 
 ---
 
 ## How I Used AI
 
-<!-- Two specific moments — what you asked, what came back, what you changed.
 
-     ⚠️ Plus disclosure of any pre-labelling. If you had a model pre-label a
-     batch and then read and corrected every one, say that. It's an allowed
-     workflow and disclosing it costs you nothing. Not disclosing it is the
-     problem. -->
+**1. Reading the community and drafting the labels.** Claude pulled real comments from the Hacker News API, read 80 of them, and proposed the three labels (`argued`, `asserted`, `chatter`) and the "cross out the fact" decision rule for the `argued` vs `asserted` boundary. I asked it to do the reading and first draft; the label names, definitions and rule are in the README as it drafted them. <!--
 
-**Moment 1**
+**2. Pre-labelling the dataset (disclosure).** Claude pre-labelled 330 sampled comments using my definitions and rule, and the 200 rows in `labels.csv` were chosen from those 330. Every row's `note` says "pre-labelled by Claude, not yet reviewed by me". When I asked whether the file made sense, Claude flagged about a dozen `argued` rows it thought were too generous (public-service notices, bare links, vague numbers). 
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
-
-**Moment 2**
-
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
-
-**Pre-labelling disclosure:**
-
-<!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
-
-     Don't fill these in during unit 5.
-     ═══════════════════════════════════════════════════════════════════ -->
 
 ---
+
+<!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
+     Don't fill these in during unit 5.
+     ═══════════════════════════════════════════════════════════════════ -->
 
 ## Baseline vs. Trained
 
