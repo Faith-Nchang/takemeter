@@ -177,7 +177,7 @@ I haven't studied the numbers yet; that's next unit's work. They are in `results
 ## How I Used AI
 
 
-**1. Reading the community and drafting the labels.** Claude pulled real comments from the Hacker News API, read 80 of them, and proposed the three labels (`argued`, `asserted`, `chatter`) and the "cross out the fact" decision rule for the `argued` vs `asserted` boundary. I asked it to do the reading and first draft; the label names, definitions and rule are in the README as it drafted them. <!--
+**1. Reading the community and drafting the labels.** Claude pulled real comments from the Hacker News API, read 80 of them, and proposed the three labels (`argued`, `asserted`, `chatter`) and the "cross out the fact" decision rule for the `argued` vs `asserted` boundary. I asked it to do the reading and first draft; the label names, definitions and rule are in the README as it drafted them.
 
 **2. Pre-labelling the dataset (disclosure).** Claude pre-labelled 330 sampled comments using my definitions and rule, and the 200 rows in `labels.csv` were chosen from those 330. Every row's `note` says "pre-labelled by Claude, not yet reviewed by me". When I asked whether the file made sense, Claude flagged about a dozen `argued` rows it thought were too generous (public-service notices, bare links, vague numbers). 
 
@@ -190,23 +190,26 @@ I haven't studied the numbers yet; that's next unit's work. They are in `results
 
 ## Baseline vs. Trained
 
+**Evaluation inputs:** The baseline uses all 30 rows of the existing `test_split.csv`, with no sample cap or fallback, and the exact definitions copied from this README into `label_definitions.txt`. Reconstructing the notebook's seed-42 split from `labels.csv` reproduced the saved test posts and labels in order. Their per-label counts match `results.json`, and none of these test texts occurs in the reconstructed training or validation sets. The original `criteria.md`, `labels.csv`, `results.json`, and `test_split.csv` remain unchanged. The environment check passed all nine checks, with only the initial baseline-download warning.
+
 <!-- Both models on the same posts. `python baseline.py --trained results.json`
      prints this table for you. -->
 
 | Measure | Baseline | Trained | Difference |
 |---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Overall accuracy | 0.400 | 0.567 | +0.167 |
+| Macro F1 | 0.300 | 0.382 | +0.082 |
+| F1 — `argued` | 0.400 | 0.429 | +0.029 |
+| F1 — `asserted` | 0.500 | 0.718 | +0.218 |
+| F1 — `chatter` | 0.000 | 0.000 | +0.000 |
+
+Difference is trained minus baseline, rounded to three decimal places. Run with `.venv\Scripts\python.exe baseline.py --trained results.json` on October 27, 2026, using `facebook/bart-large-mnli`. The baseline predictions and full-precision metrics are saved in `baseline_results.json`; the trained results remain in `results.json`.
 
 **What I predicted before I looked:**
-<!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
-     prediction made afterwards isn't one. -->
+ the trained model may beat the zero-shot baseline on `asserted`, because it learned this community's unsupported claims. The existing trained results had already been inspected; this is a prediction before baseline results, not a claim that it preceded the unit 5 results.
 
 **What the gap actually means:**
-<!-- If the baseline matched your trained model, your fine-tuning added
-     nothing — and that is a real finding, not a failure. Say it plainly. -->
+On this held-out split, the trained model gets 17 of 30 posts right, compared with 12 of 30 for the zero-shot baseline: a gain of 16.7 percentage points in accuracy and 0.082 macro F1. The prediction about `asserted` was supported: its F1 increases from 0.500 to 0.718, the largest per-label gain. `argued` improves only slightly, and both models have zero F1 on `chatter`, so training has not solved that label. This is evidence of a benefit on this split, not yet evidence that the gain is stable across different splits; the three-seed evaluation is still pending.
 
 
 

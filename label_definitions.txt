@@ -3,6 +3,6 @@
 # Copied from the README so the baseline is judged on exactly the
 # definitions in it. baseline.py reads this file.
 
-argued: makes a point and backs it with a specific, checkable fact (a number, date, quote, link, named example) that carries the point
-asserted: states a claim, opinion or prediction with no support, or with support a stranger could not check
-chatter: asserts nothing: a genuine question, a joke, agreement or thanks, a plug, a bare pointer to a link
+argued: makes a point and backs it with a specific, checkable fact (a number, date, quote, link, named example or reproducible detail) that carries the point.
+asserted: states a claim, opinion or prediction with no support, or with support a stranger couldn't check ("in my experience", "I recall reading"). It might be true; it isn't argued.
+chatter: asserts nothing: a genuine question, a joke, agreement or thanks, a plug, a bare pointer to a link.
