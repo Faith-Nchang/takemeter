@@ -175,9 +175,6 @@ I haven't studied the numbers yet; that's next unit's work. They are in `results
 ---
 
 ## How I Used AI
-
-
-
 **1. Reading the community and drafting the labels.** Claude pulled real comments from the Hacker News API, read 80 of them, and proposed the three labels (`argued`, `asserted`, `chatter`) and the "cross out the fact" decision rule for the `argued` vs `asserted` boundary. I asked it to do the reading and first draft; the label names, definitions and rule are in the README as it drafted them.
 
 **2. Pre-labelling the dataset (disclosure).** Claude pre-labelled 330 sampled comments using my definitions and rule, and the 200 rows in `labels.csv` were chosen from those 330. Every row's `note` says "pre-labelled by Claude, not yet reviewed by me". When I asked whether the file made sense, Claude flagged about a dozen `argued` rows it thought were too generous (public-service notices, bare links, vague numbers). 
@@ -294,7 +291,7 @@ Six real `argued` posts were predicted as `asserted`, while zero went the other 
 
 **Limits of the diagnosis.** Accuracy varies by 10 percentage points, and `argued` F1 varies by 0.429. Those results support split sensitivity and majority-label collapse, but do not prove whether the underlying cause is labeling or training. The staff agreement evidence is unavailable, and the staff-post labels were produced by Codex, so a later comparison of that file would measure AI agreement rather than independent evidence of my own consistency. The staff taxonomy also differs from my taxonomy. No staff disagreements or agreement rate are invented here.
 
-**One improvement selected for Phase 4 — increase epochs from 3 to 5.** This is a hypothesis to test, not a proven fix. In the saved notebook output, validation loss still decreases from epoch 2 to epoch 3 in all three seeds (approximately 0.967→0.946, 1.009→0.997, and 1.018→1.010), while two runs still predict only the majority label. That gives a concrete reason to test whether additional training helps learn the minority boundaries. Change only `EPOCHS`; keep the learning rate, batch size, token limit, base model, dataset, taxonomy, criteria, and seeds 42/7/2024 fixed. Set `RUN_LABEL = "after"`, preserve both result files, and compare each seed's accuracy, per-label F1, and confidence metrics. This change has only been selected here; it has not been applied or measured.
+**One improvement selected for Phase 4 — increase epochs from 3 to 5.** In the saved before-run notebook output, validation loss still decreases from epoch 2 to epoch 3 in all three seeds (approximately 0.967→0.946, 1.009→0.997, and 1.018→1.010), while two runs still predict only the majority label. That gave a concrete reason to test whether additional training helps learn the minority boundaries. Only `EPOCHS` changed; the learning rate, batch size, token limit, base model, dataset, taxonomy, criteria, and seeds 42/7/2024 stayed fixed. The completed experiment and results are reported in **The Improvement** below; the benefit does not prove that undertraining was the only cause.
 
 <!-- For each miss: the cause, and how you know. The four common causes are:
      too few examples for a label, a boundary you applied inconsistently, a
@@ -339,23 +336,7 @@ Six real `argued` posts were predicted as `asserted`, while zero went the other 
      written rule two different ways on 30 posts, that is direct evidence about
      what you did across your own 200. -->
 
-**1.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
-
-**2.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
+No disagreements are listed yet because the staff answer key is unavailable. Once it is supplied, run `agreement.py` and record every differing post, both labels, the reasoned call under the staff rules, and its category (rule applied loosely, rule missing, or defensible ambiguity).
 
 **What the pattern in my disagreements tells me:**
 
@@ -368,19 +349,51 @@ Pending. Without staff labels, no disagreements can be identified or adjudicated
 
 **What I changed:**
 
+In the existing notebook, increased `EPOCHS` from 3 to 5 and set `RUN_LABEL = "after"` so the new trials write `results_three_seeds_after.json`. The run label controls the output filename; epochs are the only experimental change. The base model remains `distilbert-base-uncased`, learning rate `2e-5`, batch size 16, token limit 128, and seeds 42, 7, and 2024. The dataset, label order, taxonomy, criteria, and split procedure are unchanged, so the same seed selects the same train/validation/test posts before and after. Each trial starts from the base model rather than continuing the previous seed's trained model.
+
 **Which diagnosis pointed at it:**
+
+Seeds 7 and 2024 predicted only `asserted` before the change, and validation loss was still falling between epochs 2 and 3 in every seed. Two additional epochs test whether more training helps distinguish `argued` and `chatter`. This is a measured training hypothesis; the unavailable staff agreement check cannot establish whether training labels are also inconsistent.
 
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | ≥ 0.65 on every seed | 0.567 | 0.567 | 0.633 | MISSED |
+| 2. Every label F1 (minimum shown) | ≥ 0.50 on every seed | 0.000 | 0.000 | 0.444 | MISSED |
+| 3. Dataset label proportions | Each between 15% and 60% | 30% / 46% / 24% | Same dataset | Same dataset | MET |
+| 4. Staff agreement | ≥ 0.70 on 30 posts | Pending | Shared check | Shared check | PENDING |
+| 5. Confidence: top-third accuracy / gap over bottom third | ≥ 0.80 / ≥ 0.15 | 0.70 / 0.30 | 0.70 / 0.30 | 1.00 / 0.70 | MISSED |
+
+These are the completed five-epoch trials in `results_three_seeds_after.json`, run on CPU with PyTorch `2.14.1+cpu`. Criterion 3 remains a single dataset-level measurement, and criterion 4 remains unavailable. Criterion 5 applies the original thresholds to the after-trials for comparison; the original `results.json` measurement is preserved and still misses its original target. Both confidence conditions must hold in every trial, so seed 2024's success does not make the overall verdict MET. Values below are rounded for display; verdicts use unrounded values.
+
+### Before and after, paired by seed
+
+| Measure | Seed 42 before | Seed 42 after | Seed 7 before | Seed 7 after | Seed 2024 before | Seed 2024 after |
+|---|---|---|---|---|---|---|
+| Overall accuracy | 0.567 | 0.567 | 0.467 | 0.567 | 0.467 | 0.633 |
+| Macro F1 | 0.382 | 0.422 | 0.212 | 0.382 | 0.212 | 0.554 |
+| F1 — `argued` | 0.429 | 0.600 | 0.000 | 0.429 | 0.000 | 0.500 |
+| F1 — `asserted` | 0.718 | 0.667 | 0.636 | 0.718 | 0.636 | 0.718 |
+| F1 — `chatter` | 0.000 | 0.000 | 0.000 | 0.000 | 0.000 | 0.444 |
+| Most-confident-third accuracy | 0.700 | 0.700 | 0.600 | 0.700 | 0.900 | 1.000 |
+| Confidence accuracy gap | 0.200 | 0.300 | 0.400 | 0.300 | 0.800 | 0.700 |
+
+### Confusion matrix after the change — seed 42
+
+| true \ predicted | argued | asserted | chatter |
+|---|---|---|---|
+| **argued** | 6 | 3 | 0 |
+| **asserted** | 3 | 11 | 0 |
+| **chatter** | 2 | 5 | 0 |
+
+The largest off-diagonal count is now 5 true `chatter` posts called `asserted`, with none going the other way. Compared with the seed-42 before-matrix, 3 additional `argued` posts are correct, but 3 additional `asserted` posts become `argued`; the two changes cancel in overall accuracy.
 
 **Did it help, and how do I know:**
+
+Partly. Accuracy was unchanged on seed 42, improved by 10 percentage points on seed 7, and improved by 16.7 points on seed 2024. Mean accuracy across the three trials rose from 0.500 to 0.589; macro F1 improved on every seed. Neither seed 7 nor seed 2024 predicts only `asserted` anymore, and seed 2024 correctly identifies 2 of 7 `chatter` posts. However, `chatter` still has zero F1 on two seeds and only 0.444 on the third, while `asserted` F1 regressed from 0.718 to 0.667 on seed 42. No previously missed across-seed criterion became MET. More training helped some boundaries, but did not make the classifier meet the original targets.
+
+**Verification:** The protected inputs, baseline results, original trained results, saved original test split, and three-seed before-results were checked byte-for-byte after execution and remained unchanged. With the same dataset and split code, the same three seeds retain the same held-out posts. The notebook's section 6/7 outputs now show the after-run; the before-run remains in `results_three_seeds_before.json` and the before tables above.
 
 <!-- If it didn't, say so. Relabelling that didn't help is a genuinely
      interesting result and earns full credit. -->
@@ -391,12 +404,24 @@ Pending. Without staff labels, no disagreements can be identified or adjudicated
 
 ## What's Still Broken
 
+**Accuracy (criterion 1, MISSED):** Even the best after-run is 19/30 (0.633), below 0.65. Next I would review the `argued`/`asserted` errors against the written definitions and obtain independently reviewed examples before another experiment. I stopped after the one planned improvement so its effect could be measured separately.
+
+**Per-label performance (criterion 2, MISSED):** `chatter` is still the weakest label: F1 is 0.000, 0.000, and 0.444. `argued` also misses 0.50 on seed 7. Next I would audit the `chatter`/`asserted` boundary and, if needed, collect more carefully reviewed examples using the unchanged taxonomy. Those are additional interventions, so neither was mixed into this epoch experiment.
+
+**Confidence (criterion 5, MISSED):** Seeds 42 and 7 reach only 7/10 correct in their most-confident thirds. Next I would evaluate confidence on more held-out examples and assess whether it remains useful after fixing the weak labels. I did not tune a confidence threshold on these test results or lower the target; the current groups are too small to justify a broad reliability claim.
+
+**Staff agreement (criterion 4, PENDING):** The TF's answer key is unavailable, so `agreement_results.json` and disagreement adjudications are still missing. Obtain the key and run `agreement.py` to complete that comparison. Because Codex supplied the current 30 labels, an independent human labeling pass is also needed to support the original claim about my own consistency; AI-to-staff agreement alone cannot do that.
+
+**Submission status:** The baseline, both three-seed result files, both run logs, verdicts, diagnoses, and typed matrices are present. The staff agreement work remains pending, so this is not yet a complete assignment submission. No commit or submission was made as part of this phase; the current unit has three commits before this phase, so at least one additional commit is needed to reach four. Use the same repository URL as unit 5.
+
 <!-- For each criterion still missed: what you'd do, and why you stopped. -->
 
 
 
 **The gap between what I meant my labels to capture and what the model
 learned:**
+The taxonomy is meant to distinguish supported arguments, unsupported claims, and comments that assert nothing, but the seed-42 after-matrix still sends every `chatter` post into a claim label. Longer training recovered more `argued` posts while introducing reverse errors from `asserted`, so the model has learned part of the support boundary without reliably learning all three intended categories.
+
 <!-- Two sentences. Your confusion matrix is the evidence. -->
 
 
