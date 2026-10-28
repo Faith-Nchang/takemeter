@@ -177,6 +177,7 @@ I haven't studied the numbers yet; that's next unit's work. They are in `results
 ## How I Used AI
 
 
+
 **1. Reading the community and drafting the labels.** Claude pulled real comments from the Hacker News API, read 80 of them, and proposed the three labels (`argued`, `asserted`, `chatter`) and the "cross out the fact" decision rule for the `argued` vs `asserted` boundary. I asked it to do the reading and first draft; the label names, definitions and rule are in the README as it drafted them.
 
 **2. Pre-labelling the dataset (disclosure).** Claude pre-labelled 330 sampled comments using my definitions and rule, and the 200 rows in `labels.csv` were chosen from those 330. Every row's `note` says "pre-labelled by Claude, not yet reviewed by me". When I asked whether the file made sense, Claude flagged about a dozen `argued` rows it thought were too generous (public-service notices, bare links, vague numbers). 
@@ -217,6 +218,20 @@ On this held-out split, the trained model gets 17 of 30 posts right, compared wi
 
 ## Run Log — Before
 
+### Spread across three seeds
+
+| Measure | Seed 42 | Seed 7 | Seed 2024 | Spread |
+|---|---|---|---|---|
+| Overall accuracy | 0.567 | 0.467 | 0.467 | 0.100 |
+| Macro F1 | 0.382 | 0.212 | 0.212 | 0.170 |
+| F1 — `argued` | 0.429 | 0.000 | 0.000 | 0.429 |
+| F1 — `asserted` | 0.718 | 0.636 | 0.636 | 0.082 |
+| F1 — `chatter` | 0.000 | 0.000 | 0.000 | 0.000 |
+
+Accuracy varies by 10 percentage points across these splits. Seeds 7 and 2024 predict only `asserted`, while `chatter` has zero F1 in all three trials; the spread therefore hides substantial differences in whether `argued` is recognized at all.
+
+### Criteria run log
+
 <!-- Five criteria across three seeds. The notebook's section 6 prints the
      spread table; the Target and Verdict columns are yours. -->
 
@@ -233,13 +248,17 @@ On this held-out split, the trained model gets 17 of 30 posts right, compared wi
 <!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
      An image of a matrix earns nothing. -->
 
-| true \ predicted |  |  |  |
+This is the **seed 42 before-run** matrix (`all_results[0]` in notebook section 7), covering 30 held-out posts. Rows are true labels; columns are predictions.
+
+| true \ predicted | argued | asserted | chatter |
 |---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| **argued** | 3 | 6 | 0 |
+| **asserted** | 0 | 14 | 0 |
+| **chatter** | 2 | 5 | 0 |
 
 **My biggest off-diagonal number, and what it means:**
+Six real `argued` posts were predicted as `asserted`, while zero went the other way, showing that on this split the model tends to treat supported arguments as unsupported claims.
+
 <!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
      direction. "7 real analysis posts were called hot_take and only 3 went the
      other way" is a direction, not just an error rate. -->
