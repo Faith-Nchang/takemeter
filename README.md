@@ -237,11 +237,15 @@ Accuracy varies by 10 percentage points across these splits. Seeds 7 and 2024 pr
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | ≥ 0.65 on every seed | 0.567 | 0.467 | 0.467 | MISSED |
+| 2. Every label F1 (minimum shown) | ≥ 0.50 on every seed | 0.000 | 0.000 | 0.000 | MISSED |
+| 3. Dataset label proportions | Each between 15% and 60% | 30% / 46% / 24% | Same dataset | Same dataset | MET |
+| 4. Staff agreement | ≥ 0.70 on 30 posts | Pending | Shared check | Shared check | PENDING |
+| 5. Confidence: top-third accuracy / gap over bottom third | ≥ 0.80 / ≥ 0.15 | 0.70 / 0.20 | 0.60 / 0.40 | 0.90 / 0.80 | MISSED |
+
+Criterion 3 is measured once on all 200 rows of `labels.csv`: `argued` 60 (30%), `asserted` 92 (46%), and `chatter` 48 (24%). These are dataset proportions, not three independent trial measurements. Criterion 4 is also a single shared check and cannot be evaluated without the staff answer key.
+
+Criterion 5 originally names `results.json`; that original measurement is 0.70 top-third accuracy versus 0.50 bottom-third accuracy, a 0.20 gap, so it misses the 0.80 requirement. The row also applies the same thresholds to all three new trials without changing the original criterion: seed 2024 alone passes both conditions, so the repeated-trial check also misses. The notebook sorts winning softmax confidence using `np.argsort` and uses the first and last 10 predictions (30 divided by 3); ties follow NumPy's existing sort behavior. No threshold or original criterion was revised.
 
 ### Confusion matrix
 
@@ -274,13 +278,23 @@ Six real `argued` posts were predicted as `asserted`, while zero went the other 
 
 | # | Criterion | Target | Verdict | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Overall accuracy | ≥ 0.65 on every seed | MISSED | All three accuracies are below 0.65; even the best is only 17/30 (0.567). |
+| 2 | Every label F1 | ≥ 0.50 on every seed | MISSED | `chatter` has F1 0.000 on every seed; `argued` has 0.429, 0.000, 0.000. |
+| 3 | Dataset balance | Every label between 15% and 60% | MET | The full-dataset proportions are 30%, 46%, and 24%, all within the original bounds. |
+| 4 | Agreement with staff | ≥ 0.70 (at least 21/30) | PENDING | The TF's answer key is unavailable; no agreement rate has been calculated. |
+| 5 | Confidence usefulness | Top third ≥ 0.80 accurate and gap ≥ 0.15 | MISSED | Original `results.json`: 0.70 top-third accuracy, despite a passing 0.20 gap. Across the new trials, seeds 42 and 7 also fail top-third accuracy. |
 
 **Diagnoses**
+
+**Criterion 1 — majority-label predictions dominate.** Seeds 7 and 2024 call all 30 test posts `asserted`, giving 14/30 accuracy and missing all 9 `argued` and 7 `chatter` posts in each split. Seed 42 recovers only 3 `argued` posts and no `chatter` posts. This identifies the immediate source of the accuracy miss: the model has not learned to separate the minority labels reliably. Dataset imbalance may contribute (`asserted` is 46%), but the counts alone do not establish why the model collapses to it.
+
+**Criterion 2 — `chatter` is never predicted, and `argued` is unstable.** In seed 42, 5 of the 7 true `chatter` posts go to `asserted` and 2 to `argued`; in the other two seeds all 7 go to `asserted`. `argued` recall falls from 3/9 to 0/9. `chatter` is actually the smallest label (48 examples), despite the original criterion rationale anticipating that `argued` would be smallest; only 7 `chatter` examples occur in each test split. Small support makes the estimate coarse, but zero predictions across all three runs indicates a repeated failure, not merely one unlucky split. The remaining causes could include inconsistent training labels, difficult boundaries, or insufficient learning from 200 examples. The existing AI-prelabeling disclosure makes a label audit warranted, but no independent review currently proves labeling inconsistency.
+
+**Criterion 5 — ranking confidence is better than trusting its top group.** Every seed's top third is more accurate than its bottom third by at least 0.15, but only seed 2024 reaches 0.80 top-third accuracy. Seed 42's top group gets 7/10 right and seed 7's gets 6/10 right. Seed 7 predicts only `asserted`, so even its most confident group cannot reliably separate the labels; confidence is ranking guesses within a model that already misses both minority classes. With 10 predictions per group, one error changes accuracy by 10 percentage points. This explains the measured miss without claiming that these three small groups establish calibrated probabilities.
+
+**Limits of the diagnosis.** Accuracy varies by 10 percentage points, and `argued` F1 varies by 0.429. Those results support split sensitivity and majority-label collapse, but do not prove whether the underlying cause is labeling or training. The staff agreement evidence is unavailable, and the staff-post labels were produced by Codex, so a later comparison of that file would measure AI agreement rather than independent evidence of my own consistency. The staff taxonomy also differs from my taxonomy. No staff disagreements or agreement rate are invented here.
+
+**One improvement selected for Phase 4 — increase epochs from 3 to 5.** This is a hypothesis to test, not a proven fix. In the saved notebook output, validation loss still decreases from epoch 2 to epoch 3 in all three seeds (approximately 0.967→0.946, 1.009→0.997, and 1.018→1.010), while two runs still predict only the majority label. That gives a concrete reason to test whether additional training helps learn the minority boundaries. Change only `EPOCHS`; keep the learning rate, batch size, token limit, base model, dataset, taxonomy, criteria, and seeds 42/7/2024 fixed. Set `RUN_LABEL = "after"`, preserve both result files, and compare each seed's accuracy, per-label F1, and confidence metrics. This change has only been selected here; it has not been applied or measured.
 
 <!-- For each miss: the cause, and how you know. The four common causes are:
      too few examples for a label, a boundary you applied inconsistently, a
@@ -303,7 +317,7 @@ Six real `argued` posts were predicted as `asserted`, while zero went the other 
      data/staff_taxonomy.md, not your own — so every argument below is made
      from those definitions and those decision rules. -->
 
-**Agreement rate:** ___ / 30 = ___%
+**Agreement rate:** PENDING — `data/staff_labels.csv` is unavailable because I do not currently have access to a TF. The 30 labels in `my_staff_labels.csv` were produced by Codex under the staff taxonomy without consulting an answer key; this is not a completed human agreement check. Criterion 4 remains pending until the required independent labels and evidence are available.
 
 <!-- Nobody grades this number. A 60% who argues every disagreement from the
      stated rules beats a 95% who wrote "staff was right" nine times. Several
@@ -345,6 +359,7 @@ Six real `argued` posts were predicted as `asserted`, while zero went the other 
 
 **What the pattern in my disagreements tells me:**
 
+Pending. Without staff labels, no disagreements can be identified or adjudicated, and no labeling-consistency conclusion can be drawn from this check.
 
 
 ---
